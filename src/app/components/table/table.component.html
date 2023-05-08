@@ -1,0 +1,48 @@
+<div class="table-header">
+  <button mat-stroked-button color="primary" routerLink="/add">
+    Add Employee
+  </button>
+  <input
+    type="search"
+    placeholder="Search"
+    name="search"
+    class="search"
+    [(ngModel)]="search"
+  />
+</div>
+
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Position</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees | filter : search">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.middleName }}</td>
+      <td>{{ employee.position }}</td>
+      <td class="actions">
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/edit', employee.id]"
+        >
+          Edit
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="handleDelete(employee.id)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

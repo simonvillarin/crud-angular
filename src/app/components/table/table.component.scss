@@ -1,0 +1,52 @@
+.table-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 7rem;
+}
+
+.search {
+  width: 15rem;
+  padding: 0.625rem 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(63, 81, 181);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+thead {
+  background-color: rgb(63, 81, 181);
+  color: #fff;
+}
+
+tbody:last-of-type {
+  border-bottom: 1px solid rgb(63, 81, 181);
+}
+
+th {
+  font-weight: 400;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+td {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}

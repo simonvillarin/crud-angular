@@ -1,0 +1,24 @@
+<main>
+  <div class="form-container">
+    <h1>Add Employee</h1>
+    <form (ngSubmit)="handleSubmit($event)">
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="lastName" name="lastName" required />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput [(ngModel)]="firstName" name="firstName" required />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Middle Name</mat-label>
+        <input matInput [(ngModel)]="middleName" name="middleName" required />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Position</mat-label>
+        <input matInput [(ngModel)]="position" name="position" required />
+      </mat-form-field>
+      <button mat-raised-button color="primary">Submit</button>
+    </form>
+  </div>
+</main>
